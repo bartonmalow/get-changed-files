@@ -35,7 +35,7 @@
     "format": "prettier --write **/*.ts",
     "format:check": "prettier --check **/*.ts",
     "lint": "eslint src/**/*.ts",
-    "package": "ncc build lib/main.js -o dist",
+    "package": "ncc build lib/main.js -o dist && echo '{\"type\":\"commonjs\"}' > dist/package.json",
     "test": "jest",
     "all": "npm run clean && npm run build && npm run format && npm run lint && npm run package && npm run test"
   },
